@@ -23,5 +23,5 @@ then you can compile and run the newFile.
 ![c,conventer,c-conventer](https://github.com/Hakan-er/just-c/blob/master/Screenshots/oldCode.png)
 
 ## new.c
-![c,conventer,c-conventer](https://github.com/Hakan-er/just-c/blob/master/Screenshots/newCode.png)
+![c,conventer,c-conventer](https://github.com/Hakan-er/just-c/blob/master/Screenshots/newCode.png)  
 ![c,conventer,c-conventer](https://github.com/Hakan-er/just-c/blob/master/Screenshots/newCode3.png)
