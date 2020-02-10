@@ -4,9 +4,9 @@ C to C converter. It converts a C code to a real C code.
 3 ways to run:
 > ./just-c old.c new.c
 >
-> ./just-c old.c (new file will be newFile.c)
+> ./just-c old.c (default newFile.c)
 >
-> ./just-c (new file will be newFile.c)
+> ./just-c (default newFile.c)
 
 then you can compile and run the newFile.
 
