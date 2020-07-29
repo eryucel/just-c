@@ -1,5 +1,7 @@
 # just-c
-C to C converter. It converts a C code to a real C code.
+C to C converter. It converts a C code to a real C code. :=)
+
+Obfuscator for the C/C++ 
 
 3 ways to run:
 > ./just-c old.c new.c
