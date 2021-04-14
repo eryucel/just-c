@@ -22,6 +22,9 @@ int main(int argc, char **args)
 {
     FILE *oldFileP;
     FILE *newFileP;
+    FILE *newFileCodeP;
+	newFileP = fopen("obfuscated.h", "w");
+	newFileCodeP = fopen("obfuscated.c", "w");
     char *line = (char *)malloc(MAXCHAR);
     int counter = 0;
     Bool multiComment = false;
@@ -48,15 +51,7 @@ int main(int argc, char **args)
         }
     }
 
-    if (argc > 2)
-    {
-        newFileP = fopen(args[2], "w");
-    }
-    else
-    {
-        newFileP = fopen("newFile.c", "w");
-    }
-
+	fprintf(newFileP, "#ifndef HEADER_FILE\n#define HEADER_FILE\n\n");
     while (fgets(line, MAXCHAR, oldFileP) != NULL)
     {
         if (line[0] != '#')
@@ -126,18 +121,20 @@ int main(int argc, char **args)
             fprintf(newFileP, "%s", line);
         }
     }
-    fprintf(newFileP, "\n");
+	fprintf(newFileP, "\n#endif");
+    fprintf(newFileCodeP, "#include \"obfuscated.h\"\n\n");
     int i = 0;
     for (i; i < counter; ++i)
     {
         char cStr[i + 2];
         memset(cStr, 'c', i + 1);
         cStr[i + 1] = '\0';
-        fprintf(newFileP, "%s\n", cStr);
+        fprintf(newFileCodeP, "%s\n", cStr);
     }
 
     fclose(oldFileP);
     fclose(newFileP);
+    fclose(newFileCodeP);
 
     return 0;
 }
