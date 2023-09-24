@@ -1,7 +1,7 @@
 # just-c
 ## CONVERT YOUR CODE TO A REAL C CODE 
 C/C++ code obfuscator. 
-It converts the entire code into a pyramid-shaped compilable code consisting only of the character 'c'. 
+It converts the entire code into a half pyramid-shaped compilable code consisting only of the character 'c'. 
 
 ## Example
 ### This program converts the following code 
